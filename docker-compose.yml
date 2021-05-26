@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  node:
+    container_name: nextjs
+    image: "node:16"
+    user: "node"
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - 3000:3000
+    command: "npm run dev"
